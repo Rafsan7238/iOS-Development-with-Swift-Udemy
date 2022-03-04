@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A85F306827D2618F008F0788 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F306727D2618F008F0788 /* DetailView.swift */; };
+		A85F306A27D26624008F0788 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85F306927D26624008F0788 /* WebView.swift */; };
 		A8C89B9B27D10DA200149BCF /* H4X0R_NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C89B9A27D10DA200149BCF /* H4X0R_NewsApp.swift */; };
 		A8C89B9D27D10DA200149BCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C89B9C27D10DA200149BCF /* ContentView.swift */; };
 		A8C89B9F27D10DA400149BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C89B9E27D10DA400149BCF /* Assets.xcassets */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A85F306727D2618F008F0788 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A85F306927D26624008F0788 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		A85F306B27D26728008F0788 /* H4X0R News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4X0R News.entitlements"; sourceTree = "<group>"; };
 		A8C89B9727D10DA200149BCF /* H4X0R News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H4X0R News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C89B9A27D10DA200149BCF /* H4X0R_NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4X0R_NewsApp.swift; sourceTree = "<group>"; };
 		A8C89B9C27D10DA200149BCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A85F306627D2616A008F0788 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8C89B9C27D10DA200149BCF /* ContentView.swift */,
+				A85F306727D2618F008F0788 /* DetailView.swift */,
+				A85F306927D26624008F0788 /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A8C89B8E27D10DA200149BCF = {
 			isa = PBXGroup;
 			children = (
@@ -55,9 +70,10 @@
 		A8C89B9927D10DA200149BCF /* H4X0R News */ = {
 			isa = PBXGroup;
 			children = (
+				A85F306B27D26728008F0788 /* H4X0R News.entitlements */,
 				A8C89BA827D1121400149BCF /* Models */,
 				A8C89B9A27D10DA200149BCF /* H4X0R_NewsApp.swift */,
-				A8C89B9C27D10DA200149BCF /* ContentView.swift */,
+				A85F306627D2616A008F0788 /* Views */,
 				A8C89B9E27D10DA400149BCF /* Assets.xcassets */,
 				A8C89BA027D10DA400149BCF /* Preview Content */,
 			);
@@ -154,6 +170,8 @@
 				A8C89B9D27D10DA200149BCF /* ContentView.swift in Sources */,
 				A8C89BAC27D1135900149BCF /* PostData.swift in Sources */,
 				A8C89B9B27D10DA200149BCF /* H4X0R_NewsApp.swift in Sources */,
+				A85F306A27D26624008F0788 /* WebView.swift in Sources */,
+				A85F306827D2618F008F0788 /* DetailView.swift in Sources */,
 				A8C89BAA27D1122E00149BCF /* Network Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,12 +300,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
 				DEVELOPMENT_TEAM = G94RT2TCNB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +322,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.rafsan.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -312,12 +334,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R News/Preview Content\"";
 				DEVELOPMENT_TEAM = G94RT2TCNB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.news";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -331,6 +356,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tech.rafsan.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
