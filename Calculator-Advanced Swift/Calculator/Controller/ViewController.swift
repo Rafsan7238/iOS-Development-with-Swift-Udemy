@@ -26,56 +26,54 @@ class ViewController: UIViewController {
         }
     }
     
+    private var calculator = CalculatorLogic()
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
         //What should happen when a non-number button is pressed
         
         isFinishedTypingNumber = true
+        calculator.setNumber(displayValue)
         
         if let calcMethod = sender.currentTitle {
             
-            let calculator = CalculatorLogic(number: displayValue)
-            
-            guard let result = calculator.calculate(symbol: calcMethod) else {
-                fatalError("The result of the calculation is nil!")
-            }
-            
-            displayValue = result
-            
-        }
-    
-    }
-
-    
-    @IBAction func numButtonPressed(_ sender: UIButton) {
-        
-        //What should happen when a number is entered into the keypad
-    
-        if let numValue = sender.currentTitle {
-            
-            if isFinishedTypingNumber {
-                displayLabel.text = numValue
-                isFinishedTypingNumber = false
-            }
-            
-            else {
+            if let result = calculator.calculate(symbol: calcMethod) {
                 
-                if numValue == "." {
-                    
-                    let isInt = floor(displayValue) == displayValue
-                    
-                    if !isInt {
-                        return
-                    }
+                displayValue = result
+                
+            }
+        }
+    }
+        
+        
+        @IBAction func numButtonPressed(_ sender: UIButton) {
+            
+            //What should happen when a number is entered into the keypad
+            
+            if let numValue = sender.currentTitle {
+                
+                if isFinishedTypingNumber {
+                    displayLabel.text = numValue
+                    isFinishedTypingNumber = false
                 }
                 
-                displayLabel.text = displayLabel.text! + numValue
+                else {
+                    
+                    if numValue == "." {
+                        
+                        let isInt = floor(displayValue) == displayValue
+                        
+                        if !isInt {
+                            return
+                        }
+                    }
+                    
+                    displayLabel.text = displayLabel.text! + numValue
+                }
             }
+            
+            
         }
         
-        
     }
-
-}
-
+    
