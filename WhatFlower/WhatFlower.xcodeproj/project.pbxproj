@@ -16,6 +16,9 @@
 		A8B9F1122811E47600757E06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B9F1102811E47600757E06 /* LaunchScreen.storyboard */; };
 		A8B9F11A2811E64300757E06 /* FlowerClassifier.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = A8B9F1192811E64300757E06 /* FlowerClassifier.mlkitmodel */; };
 		A8B9F11D2811EF6C00757E06 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = A8B9F11C2811EF6C00757E06 /* SwiftyJSON */; };
+		A8D1E7272812A0750036C0FF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A8D1E7262812A0750036C0FF /* Alamofire */; };
+		A8D1E72C2812A2760036C0FF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D1E72B2812A2760036C0FF /* DataModel.swift */; };
+		A8D1E72F2812ACC30036C0FF /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = A8D1E72E2812ACC30036C0FF /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,7 @@
 		A8B9F1112811E47600757E06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8B9F1132811E47600757E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8B9F1192811E64300757E06 /* FlowerClassifier.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlkitmodel; sourceTree = "<group>"; };
+		A8D1E72B2812A2760036C0FF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D1E72F2812ACC30036C0FF /* SDWebImage in Frameworks */,
 				A8B9F11D2811EF6C00757E06 /* SwiftyJSON in Frameworks */,
+				A8D1E7272812A0750036C0FF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +70,9 @@
 			children = (
 				A8B9F1022811E47400757E06 /* AppDelegate.swift */,
 				A8B9F1042811E47400757E06 /* SceneDelegate.swift */,
-				A8B9F1062811E47400757E06 /* ViewController.swift */,
-				A8B9F1082811E47400757E06 /* Main.storyboard */,
+				A8D1E72A2812A2590036C0FF /* Models */,
+				A8D1E7282812A2410036C0FF /* Controllers */,
+				A8D1E7292812A24A0036C0FF /* Views */,
 				A8B9F10E2811E47600757E06 /* Assets.xcassets */,
 				A8B9F1102811E47600757E06 /* LaunchScreen.storyboard */,
 				A8B9F1132811E47600757E06 /* Info.plist */,
@@ -73,6 +80,30 @@
 				A8B9F10B2811E47400757E06 /* WhatFlower.xcdatamodeld */,
 			);
 			path = WhatFlower;
+			sourceTree = "<group>";
+		};
+		A8D1E7282812A2410036C0FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8B9F1062811E47400757E06 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A8D1E7292812A24A0036C0FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8B9F1082811E47400757E06 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8D1E72A2812A2590036C0FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8D1E72B2812A2760036C0FF /* DataModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +124,8 @@
 			name = WhatFlower;
 			packageProductDependencies = (
 				A8B9F11C2811EF6C00757E06 /* SwiftyJSON */,
+				A8D1E7262812A0750036C0FF /* Alamofire */,
+				A8D1E72E2812ACC30036C0FF /* SDWebImage */,
 			);
 			productName = WhatFlower;
 			productReference = A8B9F0FF2811E47400757E06 /* WhatFlower.app */;
@@ -107,6 +140,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
+				ORGANIZATIONNAME = "Rafsan Al Mamun";
 				TargetAttributes = {
 					A8B9F0FE2811E47400757E06 = {
 						CreatedOnToolsVersion = 13.0;
@@ -124,6 +158,8 @@
 			mainGroup = A8B9F0F62811E47400757E06;
 			packageReferences = (
 				A8B9F11B2811EF6C00757E06 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				A8D1E7252812A0750036C0FF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A8D1E72D2812ACC30036C0FF /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = A8B9F1002811E47400757E06 /* Products */;
 			projectDirPath = "";
@@ -157,6 +193,7 @@
 				A8B9F1032811E47400757E06 /* AppDelegate.swift in Sources */,
 				A8B9F10D2811E47400757E06 /* WhatFlower.xcdatamodeld in Sources */,
 				A8B9F1052811E47400757E06 /* SceneDelegate.swift in Sources */,
+				A8D1E72C2812A2760036C0FF /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +423,22 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		A8D1E7252812A0750036C0FF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+		A8D1E72D2812ACC30036C0FF /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -393,6 +446,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A8B9F11B2811EF6C00757E06 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		A8D1E7262812A0750036C0FF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8D1E7252812A0750036C0FF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A8D1E72E2812ACC30036C0FF /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8D1E72D2812ACC30036C0FF /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 
