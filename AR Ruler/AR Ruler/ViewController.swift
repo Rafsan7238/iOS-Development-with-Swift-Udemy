@@ -13,6 +13,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     var dotNodes = [SCNNode]()
+    @IBOutlet weak var textLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +81,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let distance = sqrt(pow(a, 2) + pow(b, 2) + pow(c, 2))
         
-        print(abs(distance))
+        textLabel.text = "Distance between the points: \(abs(distance) * 100)cm"
     }
+    
+//    @IBAction func resetPoints(_ sender: UIBarButtonItem) {
+//
+//        if !dotNodes.isEmpty {
+//            for dotNode in dotNodes {
+//                dotNode.removeFromParentNode()
+//            }
+//
+//            dotNodes.removeAll()
+//            textLabel.text = "Please Add 2 or More Points to Calculate Distance"
+//        }
+        
+//    }
+    
 
 }
