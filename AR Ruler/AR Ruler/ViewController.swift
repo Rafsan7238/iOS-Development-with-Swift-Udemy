@@ -84,18 +84,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         textLabel.text = "Distance between the points: \(abs(distance) * 100)cm"
     }
     
-//    @IBAction func resetPoints(_ sender: UIBarButtonItem) {
-//
-//        if !dotNodes.isEmpty {
-//            for dotNode in dotNodes {
-//                dotNode.removeFromParentNode()
-//            }
-//
-//            dotNodes.removeAll()
-//            textLabel.text = "Please Add 2 or More Points to Calculate Distance"
-//        }
+    @IBAction func resetPoints(_ sender: UIBarButtonItem) {
         
-//    }
+        if !dotNodes.isEmpty {
+            for dotNode in dotNodes {
+                dotNode.removeFromParentNode()
+            }
+            
+            dotNodes.removeAll()
+            textLabel.text = "Please Add 2 or More Points to Calculate Distance"
+        }
+        
+    }
     
 
 }
